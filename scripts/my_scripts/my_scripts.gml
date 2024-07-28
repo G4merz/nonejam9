@@ -41,7 +41,7 @@ function chance(_chance){
 
 //Essa função retorna o valor em segundos (baseado no fps) desejado
 function seconds(_sec){
-	return _sec * global.target_fps	
+	return _sec * FPS
 }
 #endregion
 

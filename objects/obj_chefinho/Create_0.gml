@@ -6,9 +6,12 @@ max_vel = 5
 acel = 0.3
 spd_multi = 1
 
+tempo_dash = seconds(0.75)
+espera_dash = 0
+
 //Variáveis de desenho
-image_spd = 8 / game_get_speed(gamespeed_fps) //Velocidade manual (8 FPS)
-def_image_spd = 8 / game_get_speed(gamespeed_fps) //Velocidade manual padrão
+image_spd = 6 / game_get_speed(gamespeed_fps) //Velocidade manual (8 FPS)
+def_image_spd = 6 / game_get_speed(gamespeed_fps) //Velocidade manual padrão
 
 sprites = [
 			//Sprites Parado
@@ -20,12 +23,6 @@ sprites = [
 			]
 ]
 
-//Ataque
-ataque = 0
-
-//Rolada (lá ele)
-roll = 0
-
 //Controlando o player
 control = function(){
 	//Bindings
@@ -33,17 +30,32 @@ control = function(){
 	var _left = keyboard_check(vk_left)
 	var _down = keyboard_check(vk_down)
 	var _right = keyboard_check(vk_right)
-	ataque = keyboard_check_pressed(ord("X"))
-	roll = keyboard_check_pressed(ord("Z"))
+	var _dash = keyboard_check_pressed(ord("C"))
 
 	//Ajustando o lado em que estou olhando (dependendo do estado, não posso mudar a face)
 	if(texto_estado = "parado" or texto_estado = "movendo"){
 		if(_up) olhando = 1
-		if(_left){olhando = 2; xscale = -1}
 		if(_down) olhando = 3
+		if(_left){olhando = 2; xscale = -1}
 		if(_right){olhando = 0; xscale = 1}
 	}
-
+	
+	#region Dash
+	//Se eu apertar "C", aumento minha velocidade por um breve momento e reseto o timer do dash
+	if(_dash and (abs(velh) > 0 or abs(velv) > 0)){
+		spd_multi = 3
+		espera_dash = tempo_dash
+	}	
+	
+	//Voltando e arredondando o multiplicador de velocidade para o normal
+	spd_multi = lerp(spd_multi, 1, 0.25)
+	if(spd_multi < 1.1) spd_multi = 1
+	
+	//Descendo o cooldown do dash
+	espera_dash--
+	
+	#endregion
+	
 	#region Movimento
 	if((_up xor _down) or (_left xor _right)){
 		//Vendo a direção pra qual estou indo
@@ -95,16 +107,6 @@ estado_parado = function(){
 	if((_up xor _down) or (_left xor _right)){
 		estado = estado_movendo
 	}
-	
-	//Saindo do estado caso eu ataque
-	if(ataque){
-		estado = estado_ataque
-	}
-	
-	//Saindo do estado caso eu role
-	if(roll){
-		estado = estado_esquiva
-	}
 
 }
 
@@ -122,62 +124,6 @@ estado_movendo = function(){
 		estado = estado_parado
 	}
 	
-	//Saindo do estado caso eu ataque
-	if(ataque){
-		estado = estado_ataque
-	}
-	
-	//Saindo do estado caso eu role
-	if(roll){
-		estado = estado_esquiva
-	}
-}
-
-estado_ataque = function(){
-	texto_estado = "ataque"
-	
-	//Definindo a sprite correta
-	animando(0)
-	
-	//Ficando parado
-	velh = 0
-	velv = 0
-	
-	//Saindo do estado caso a animação acabe
-	if(image_ind + image_spd >= image_num) estado = estado_parado
-	
-}
-
-estado_esquiva = function(){
-
-	//Mudando minha velocidade logo quando eu entrar no estado
-	if(texto_estado != "esquiva"){
-		//Bindings (pego as teclas pra manter a rolagem em 8 direções apenas)
-		var _up = keyboard_check(vk_up)
-		var _left = keyboard_check(vk_left)
-		var _down = keyboard_check(vk_down)
-		var _right = keyboard_check(vk_right)
-	
-		var _dir = 0
-	
-		//Se eu estiver me movendo, rolo para a direção em que estou me movendo
-		if((_up xor _down) or (_left xor _right)){
-			_dir = point_direction(0, 0, _right - _left, _down - _up)
-		}else{ //Caso contrário (estou parado), vou pra direção que estou olhando
-			_dir = olhando * 90
-		}
-		
-		velh = lengthdir_x(max_vel * 1.5, _dir)
-		velv = lengthdir_y(max_vel * 1.5, _dir)
-	}
-	
-	texto_estado = "esquiva"
-	
-	//Colocando a sprite certa
-	animando(0)
-	
-	//Saindo do estado caso a animação acabe
-	if(image_ind + image_spd >= image_num) estado = estado_parado	
 }
 
 estado = estado_parado

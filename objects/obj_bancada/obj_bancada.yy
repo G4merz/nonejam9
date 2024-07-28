@@ -8,8 +8,8 @@
   "name":"obj_bancada",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Elementos da cozinha",
+    "path":"folders/Objects/Elementos da cozinha.yy",
   },
   "parentObjectId":{
     "name":"obj_colisao",
