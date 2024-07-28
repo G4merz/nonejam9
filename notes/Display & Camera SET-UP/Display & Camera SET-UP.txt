@@ -1,0 +1,2 @@
+1. Certificar-se que o aspect ratio desejado será usado no obj_display_manager
+2. Colocar a room correta no fim do Create do obj_display_manager
