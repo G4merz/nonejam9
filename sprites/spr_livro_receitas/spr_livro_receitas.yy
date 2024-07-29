@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_livro_receitas",
   "bboxMode":0,
-  "bbox_bottom":23,
+  "bbox_bottom":47,
   "bbox_left":0,
   "bbox_right":23,
   "bbox_top":0,
@@ -12,14 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"6a823105-8ffb-42f2-bb32-c1f0a0b9af2a","name":"6a823105-8ffb-42f2-bb32-c1f0a0b9af2a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"b3708ccd-2b53-4b7e-9a21-4ceec63372d5","name":"b3708ccd-2b53-4b7e-9a21-4ceec63372d5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f0e6e3f8-5cc1-47c4-a103-92d9d530625e","name":"f0e6e3f8-5cc1-47c4-a103-92d9d530625e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"20d8a5e3-3cf9-4f9e-8d67-9f07467d8d51","name":"20d8a5e3-3cf9-4f9e-8d67-9f07467d8d51","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":24,
+  "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"c1996952-0046-460b-b74f-5c853864e9e9","blendMode":0,"displayName":"default","isLocked":false,"name":"c1996952-0046-460b-b74f-5c853864e9e9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"047b203f-6009-4407-9e9b-0d49955b2689","blendMode":0,"displayName":"default","isLocked":false,"name":"047b203f-6009-4407-9e9b-0d49955b2689","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_livro_receitas",
   "nineSlice":null,
@@ -49,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -69,8 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6a823105-8ffb-42f2-bb32-c1f0a0b9af2a","path":"sprites/spr_livro_receitas/spr_livro_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d7406040-e99b-4133-bff0-778798164a16","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b3708ccd-2b53-4b7e-9a21-4ceec63372d5","path":"sprites/spr_livro_receitas/spr_livro_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b965b97c-73ac-4379-ad20-d25cca9a2718","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f0e6e3f8-5cc1-47c4-a103-92d9d530625e","path":"sprites/spr_livro_receitas/spr_livro_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c8f80ccf-f968-4726-930f-6aa9cebbe4a5","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"20d8a5e3-3cf9-4f9e-8d67-9f07467d8d51","path":"sprites/spr_livro_receitas/spr_livro_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d44460a2-b172-47ea-a62b-d42b7cb41695","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

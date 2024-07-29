@@ -1,2 +1,2 @@
-/// @description Insert description here
-// You can write your code in this editor
+global.paused = false
+if(menu_type = "recipe") obj_livro_receitas.lendo = false

@@ -4,7 +4,7 @@ enum camera_states{
 	follow_point
 }
 
-camera_state = camera_states.follow_object
+camera_state = camera_states.follow_point
 
 //Variável que define que objeto vou seguir
 seguindo = noone
@@ -33,8 +33,8 @@ cx_limit = room_width
 cy_limit = room_height
 
 //Destino da câmera
-destino_x = 0
-destino_y = 0
+destino_x = 240
+destino_y = 240
 
 //Velocidade da câmera
 cam_spd = 0.2
@@ -68,7 +68,7 @@ mover = function(){
 	if(instance_exists(seguindo)){
 		//Se não iniciei ainda...
 		//Se não iniciei ainda...
-		if(!init){
+		if(!init and camera_state = camera_states.follow_object){
 			//Coloco a câmera em uma posição que mantém o objeto no centro
 			destino_x = seguindo.x - cw_current / 2
 			destino_y = seguindo.y - ch_current / 2

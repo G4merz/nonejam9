@@ -82,3 +82,33 @@ function adjust_depth(){
 }
 
 #endregion
+
+#region Lerp Direction
+/// @desc lerp específico para ângulos
+/// @param start
+/// @param final
+/// @param div
+
+function lerp_direction(start, final, vel) {
+    var _max, _da, _result;
+    _max = 360;
+    _da = (final - start) % _max;
+    _result = 2 * _da % _max - _da;
+
+    return start + _result * vel;
+}
+#endregion
+
+#region Create Menu
+
+function create_menu(_type){
+	var _inst = noone
+	if(instance_exists(obj_menu)){
+		obj_menu.change_type(_type)
+	}else{
+		_inst = instance_create_depth(20, 20, -9000, obj_menu)
+		_inst.menu_type = _type
+	}
+}
+
+#endregion

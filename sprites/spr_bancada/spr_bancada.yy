@@ -14,8 +14,8 @@
   "frames":[
     {"$GMSpriteFrame":"","%Name":"27b1a078-6434-477b-8bcc-04ca29902543","name":"27b1a078-6434-477b-8bcc-04ca29902543","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
-  "gridX":0,
-  "gridY":0,
+  "gridX":24,
+  "gridY":24,
   "height":24,
   "HTile":false,
   "layers":[
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Área da cozinha",
-    "path":"folders/Sprites/Área da cozinha.yy",
+    "name":"Bancada",
+    "path":"folders/Sprites/Área da cozinha/Bancada.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -2,7 +2,7 @@
 event_inherited()
 
 //Variáveis de movimento
-max_vel = 5
+max_vel = 3
 acel = 0.3
 spd_multi = 1
 
@@ -10,8 +10,8 @@ tempo_dash = seconds(0.75)
 espera_dash = 0
 
 //Variáveis de desenho
-image_spd = 6 / game_get_speed(gamespeed_fps) //Velocidade manual (8 FPS)
-def_image_spd = 6 / game_get_speed(gamespeed_fps) //Velocidade manual padrão
+image_spd = 4 / game_get_speed(gamespeed_fps) //Velocidade manual (4 FPS)
+def_image_spd = 4 / game_get_speed(gamespeed_fps) //Velocidade manual padrão
 
 sprites = [
 			//Sprites Parado
@@ -20,8 +20,20 @@ sprites = [
 			spr_chefinho_idle_up,
 			spr_chefinho_idle_side,
 			spr_chefinho_idle_down
+			],
+			
+			//Sprites Andando
+			[
+			spr_chefinho_walk_side,
+			spr_chefinho_walk_up,
+			spr_chefinho_walk_side,
+			spr_chefinho_walk_down,
+			12
 			]
 ]
+
+//Variáveis para pegar itens
+picked_items = ds_list_create()
 
 //Controlando o player
 control = function(){
@@ -42,8 +54,8 @@ control = function(){
 	
 	#region Dash
 	//Se eu apertar "C", aumento minha velocidade por um breve momento e reseto o timer do dash
-	if(_dash and (abs(velh) > 0 or abs(velv) > 0)){
-		spd_multi = 3
+	if(_dash and (abs(velh) > 0 or abs(velv) > 0) and espera_dash <= 0){
+		spd_multi = 5
 		espera_dash = tempo_dash
 	}	
 	
@@ -74,8 +86,8 @@ control = function(){
 		velv = lerp(velv, 0, acel)
 	
 		//Arredondando
-		if(abs(velh) < 0.2) velh = 0
-		if(abs(velv) < 0.2) velv = 0
+		if(abs(velh) < 0.05) velh = 0
+		if(abs(velv) < 0.05) velv = 0
 	}
 #endregion
 }
@@ -114,7 +126,7 @@ estado_movendo = function(){
 	texto_estado = "movendo"
 	
 	//Definindo a sprite correta
-	animando(0)
+	animando(1)
 	
 	//Controlando o player
 	control()

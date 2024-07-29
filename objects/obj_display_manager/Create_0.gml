@@ -11,7 +11,7 @@ display_height = display_get_height()
 
 //Tamanho da janela
 window_size = 1.5
-max_window_size = 1.5
+max_window_size = 2
 
 //Aspect Ratio
 //aspect_ratio = display_get_width() / display_get_height()
@@ -79,7 +79,7 @@ change_resolution = function(_aspect_ratio, _height){
 	
 	//Agora eu defino os tamanhos da minha application_surface, da câmera e da janela do jogo.
 	window_set_size(ideal_width * window_size, ideal_height * window_size)
-	display_set_gui_size(ideal_width, ideal_height)
+	display_set_gui_size(ideal_width * window_size, ideal_height * window_size)
 	surface_resize(application_surface, ideal_width * window_size, ideal_height * window_size)
 	alarm[0] = 1
 }
