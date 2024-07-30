@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"display_write_specs",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Display",
+    "path":"folders/Scripts/Display.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -6,7 +6,7 @@
   "name":"__view_set_internal",
   "parent":{
     "name":"view",
-    "path":"folders/Scripts/compatibility/view.yy",
+    "path":"folders/Scripts/Display/compatibility/view.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

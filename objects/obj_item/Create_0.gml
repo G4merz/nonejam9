@@ -18,7 +18,13 @@ enum itens{
 	massa,
 	bolo,
 	bolo_chocolate,
-	pizza
+	pizza,
+	farinha,
+	pao,
+	pao_cortado,
+	tomate_cortado,
+	macarrao,
+	burguer
 }
 
 //Esse array guarda os nomes dos ingredientes
@@ -30,7 +36,7 @@ nomes =		[
 			"Queijo",
 			"Manteiga",
 			"Tomate",
-			"Molho de Tomate",
+			"Molho",
 			"Cacau",
 			"Chocolate",
 			"Nescau",
@@ -39,6 +45,12 @@ nomes =		[
 			"Bolo",
 			"Bolo de Chocolate",
 			"Pizza",
+			"Farinha",
+			"Pao",
+			"Pao Cortado",
+			"Tomate Cortado",
+			"Macarrao",
+			"Hamburguer"
 			]
 
 //Randomizando a sprite (temporário, apenas para testes)

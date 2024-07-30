@@ -2,45 +2,14 @@ var _up = keyboard_check_pressed(vk_up)
 var _down = keyboard_check_pressed(vk_down)
 var _confirm = keyboard_check_pressed(ord("Z"))
 
+var _prev_pos = pos
+
 pos += (_down - _up)
 if(pos >= option_length) pos = 0
 if(pos < 0) pos = option_length - 1
 
-option_length = array_length(option[menu_level])
+if(_prev_pos != pos) audio_play_sound(snd_selection, 1, 0)
 
-if(_confirm){
+option_length = array_length(option)
 
-var _prev_mnl = menu_level
-
-switch(menu_level){
-	case 0:
-		switch(pos){
-			case 0: break
-			case 1: break
-			case 2: menu_level++; break
-			case 3: instance_destroy(); break
-		}
-	break
-	case 1:
-		switch(pos){
-			case 0: break
-			case 1: break
-			case 2: menu_level++; break
-			case 3: menu_level--; break
-		}
-	break
-	case 2:
-		switch(pos){
-			case 0: break
-			case 1: break
-			case 2: break
-			case 3: menu_level--; break
-		}
-	break
-
-}
-
-if(_prev_mnl != menu_level) pos = 0
-
-}
-
+if(pos = option_length - 1 and _confirm) instance_destroy()

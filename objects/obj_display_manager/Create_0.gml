@@ -10,7 +10,7 @@ display_width = display_get_width()
 display_height = display_get_height()
 
 //Tamanho da janela
-window_size = 1.5
+window_size = 1
 max_window_size = 2
 
 //Aspect Ratio

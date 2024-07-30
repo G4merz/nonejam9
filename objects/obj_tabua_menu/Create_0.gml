@@ -6,7 +6,7 @@ espaco = 20 //Distância entre opções
 
 pos = 0 
 
-option = ["Chocolate", "Sair"]
+option = ["Chocolate", "Pão Cortado", "Tomate Cortado", "Sair"]
 
 //Pegando o "inventário" do player
 inventory = obj_chefinho.picked_items
