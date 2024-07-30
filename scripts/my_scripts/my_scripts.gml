@@ -102,13 +102,15 @@ function lerp_direction(start, final, vel) {
 #region Create Menu
 
 function create_menu(_type){
-	var _inst = noone
-	if(instance_exists(obj_menu)){
-		obj_menu.change_type(_type)
-	}else{
-		_inst = instance_create_depth(20, 20, -9000, obj_menu)
-		_inst.menu_type = _type
+	var _menu = noone
+	switch(_type){
+		case "recipe": _menu = obj_recipe_menu; break
+		case "forno": _menu = obj_forno_menu; break
+		case "pote": _menu = obj_pote_menu; break
+		case "tabua": _menu = obj_tabua_menu; break
 	}
+	
+	instance_create_depth(20, 20, -9000, _menu)
 }
 
 #endregion

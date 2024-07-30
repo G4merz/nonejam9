@@ -1,1 +1,2 @@
-adjust_depth()
+//adjust_depth()
+depth = -y + 1

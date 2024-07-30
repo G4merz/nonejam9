@@ -1,0 +1,1 @@
+index = itens.manteiga

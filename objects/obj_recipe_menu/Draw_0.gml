@@ -11,7 +11,7 @@ width = _new_w + borda * 2
 height = borda * 2 + string_height(option[0][0]) + (option_length - 1) * espaco
 
 //Desenhando a caixa
-draw_sprite_ext(sprite_index, image_index, x, y, width/sprite_width, height/sprite_height,
+draw_sprite_ext(spr_menu, image_index, x, y, width/sprite_width, height/sprite_height,
 0, c_white, 1)
 
 //Desenhando as opções

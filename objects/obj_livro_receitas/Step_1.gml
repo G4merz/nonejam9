@@ -4,11 +4,11 @@ adjust_depth()
 with(obj_chefinho){
 	if(place_meeting(x + lengthdir_x(3, olhando * 90), y + lengthdir_y(3, olhando * 90), other) 
 	and keyboard_check_pressed(ord("Z"))
-	and !instance_exists(obj_menu)){
-		lendo = true
+	and !instance_exists(obj_recipe_menu)){
+		other.lendo = true
 		create_menu("recipe")
 	}
 }
 
 //Animando de acordo com a variável "lendo"
-index = approach(index, (lendo) ? 0 : 2, 0.25)
+index = approach(index, (lendo) ? 2 : 0, 0.25)

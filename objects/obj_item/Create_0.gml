@@ -2,10 +2,10 @@
 picked = false
 
 //Essa ENUM serve para acessar as sprites dos itens de forma fácil
-enum item_sprites{
+enum itens{
 	ovo,
 	carne_crua,
-	bife,
+	carne_assada,
 	leite,
 	queijo,
 	manteiga,
@@ -25,7 +25,7 @@ enum item_sprites{
 nomes =		[
 			"Ovo",
 			"Carne Crua",
-			"Bife",
+			"Carne Assada",
 			"Leite",
 			"Queijo",
 			"Manteiga",
@@ -42,10 +42,8 @@ nomes =		[
 			]
 
 //Randomizando a sprite (temporário, apenas para testes)
-index = irandom_range(0, item_sprites.pizza)
-
-//Definindo o nome de acordo com meu index
-nome = nomes[index]
+index = irandom_range(0, itens.pizza)
+nome = ""
 
 //Variáveis de posição manuais para um movimento suave
 xx = x

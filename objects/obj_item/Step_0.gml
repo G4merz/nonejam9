@@ -3,6 +3,9 @@ pelo player de forma mais legível e fácil*/
 var _list = chef.picked_items
 var _pos_in_list = ds_list_find_index(_list, id)
 
+//Definindo o nome de acordo com meu index
+nome = nomes[index]
+
 /*Caso eu colida com o player, eu mudo a variável "picked" para true, e me adiciono
 na DS List do player se eu ainda não estiver lá*/
 if(place_meeting(x, y, chef)){

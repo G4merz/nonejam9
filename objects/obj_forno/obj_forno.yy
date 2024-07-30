@@ -1,22 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_livro_receitas",
+  "%Name":"obj_forno",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_livro_receitas",
+  "name":"obj_forno",
   "overriddenProperties":[],
   "parent":{
     "name":"Elementos da cozinha",
     "path":"folders/Objects/Elementos da cozinha.yy",
   },
-  "parentObjectId":{
-    "name":"obj_colisao",
-    "path":"objects/obj_colisao/obj_colisao.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -35,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_livro_receitas",
-    "path":"sprites/spr_livro_receitas/spr_livro_receitas.yy",
+    "name":"spr_fogao",
+    "path":"sprites/spr_fogao/spr_fogao.yy",
   },
   "spriteMaskId":null,
   "visible":true,
