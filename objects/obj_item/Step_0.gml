@@ -11,7 +11,10 @@ na DS List do player se eu ainda não estiver lá*/
 if(place_meeting(x, y, chef)){
 	if(ds_list_size(_list) < 8){
 		picked = true
-		if(_pos_in_list = -1) ds_list_add(_list, id)
+		if(_pos_in_list = -1){
+			ds_list_add(_list, id)
+			quicksound(snd_pegar_item)
+		}
 	}else{
 		
 	}	

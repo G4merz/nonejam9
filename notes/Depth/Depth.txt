@@ -1,2 +1,3 @@
 Menu -9000
 Sistema -8000
+Estande de tiro -1000

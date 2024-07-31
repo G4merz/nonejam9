@@ -1,5 +1,5 @@
 //Saindo do step se o jogo estiver pausado
-if(global.paused) exit
+if(global.paused or global.shooting) exit
 
 //Executando meu estado
 estado()

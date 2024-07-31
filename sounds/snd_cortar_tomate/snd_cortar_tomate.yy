@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_cortar_tomate",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.697959,
+  "name":"snd_cortar_tomate",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Sounds/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_cortar_tomate.MP3",
+  "type":0,
+  "volume":1.0,
+}

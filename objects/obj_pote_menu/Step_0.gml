@@ -1,24 +1,16 @@
+//Herdando as informações
+event_inherited()
+if(!usable) exit //Saindo do step caso eu não consiga usar o menu
+
 var _up = keyboard_check_pressed(vk_up)
 var _down = keyboard_check_pressed(vk_down)
 var _confirm = keyboard_check_pressed(ord("Z"))
-
-var _prev_pos = pos
-
-pos += (_down - _up)
-if(pos >= option_length) pos = 0
-if(pos < 0) pos = option_length - 1
-
-if(_prev_pos != pos) audio_play_sound(snd_selection, 1, 0)
-
-option_length = array_length(option)
-
-if(!usable) exit //Saindo do step caso eu não consiga usar o menu
 
 if(_confirm){
 
 	switch(pos){
 		case 0: //Farinha
-		do_recipe("Trigo", itens.farinha)
+		do_recipe("Trigo", itens.farinha, snd_moer)
 		break
 		
 		case 1: //Manteiga
@@ -34,7 +26,7 @@ if(_confirm){
 		break
 		
 		case 4: //Nescau
-		do_recipe("Leite", "Chocolate", itens.nescau)
+		do_recipe("Leite", "Chocolate", itens.nescau, snd_liquido)
 		break
 		
 		case 5: //Sair

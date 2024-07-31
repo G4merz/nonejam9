@@ -114,3 +114,32 @@ function create_menu(_type){
 }
 
 #endregion
+
+#region Enter Shooter e Quit Shooter
+
+function enter_shooter(){
+	//Entro no modo de tiro e reseto o delay
+	global.shooting = true
+	global.shooting_delay = 10
+	
+	//Centralizando o mouse
+	display_mouse_set(
+	window_get_x() + window_get_width() / 2,
+	window_get_y() + window_get_height() / 2)
+}
+
+function quit_shooter(){
+	//Saio do modo de tiro e reseto o delay
+	global.shooting = false
+	global.shooting_delay = 30
+}
+
+#endregion
+
+#region Quicksound
+
+function quicksound(_sound){
+	audio_play_sound(_sound, 1, 0)
+}
+
+#endregion
