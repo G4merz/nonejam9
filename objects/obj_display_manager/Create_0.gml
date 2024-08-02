@@ -15,7 +15,7 @@ max_window_size = 2
 
 //Aspect Ratio
 //aspect_ratio = display_get_width() / display_get_height()
-aspect_ratio = 1 / 1
+aspect_ratio = 4 / 3
 
 //Com o Aspect Ratio calculado, eu consigo definir minha largura ideal
 ideal_width = round(ideal_height * aspect_ratio)	

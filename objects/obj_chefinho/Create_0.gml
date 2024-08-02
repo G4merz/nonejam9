@@ -32,9 +32,6 @@ sprites = [
 			]
 ]
 
-//Variáveis para pegar itens
-picked_items = ds_list_create()
-
 //Controlando o player
 control = function(){
 	//Bindings

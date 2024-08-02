@@ -11,8 +11,8 @@
   "name":"obj_display_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controladores",
-    "path":"folders/Objects/Controladores.yy",
+    "name":"Resolução e Câmera",
+    "path":"folders/Objects/Controladores/Resolução e Câmera.yy",
   },
   "parentObjectId":null,
   "persistent":true,

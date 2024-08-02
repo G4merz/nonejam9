@@ -1,3 +1,4 @@
+/*
 draw_set_font(fnt_default)
 
 //Pegando as dimensões do menu de forma dinâmica
@@ -50,3 +51,10 @@ var _desc = scribble(description[pos])
 	.wrap(_descw - borda)
 	
 _desc.draw(_desc_box_x + borda, _desc_box_y + borda)
+*/
+
+var _cw = obj_camera.cw_current
+var _ch = obj_camera.ch_current
+draw_sprite_ext(spr_receitas, pos, 20, 20, 1, 1, 0, c_white, 1)
+draw_sprite_ext(spr_seta, (pos = 0) ? 1 : 0, 26, _ch / 2, 1, 1, 0, c_white, 1)
+draw_sprite_ext(spr_seta, (pos = option_length - 1) ? 1 : 0, _cw - 26, _ch / 2, -1, 1, 0, c_white, 1)

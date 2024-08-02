@@ -1,6 +1,6 @@
 /*Criando uma variável temporária para acessar a DS List de itens sendo segurados
 pelo player de forma mais legível e fácil*/
-var _list = chef.picked_items
+var _list = global.inventory
 var _pos_in_list = ds_list_find_index(_list, id)
 
 //Definindo o nome de acordo com meu index
@@ -9,15 +9,13 @@ nome = nomes[index]
 /*Caso eu colida com o player, eu mudo a variável "picked" para true, e me adiciono
 na DS List do player se eu ainda não estiver lá*/
 if(place_meeting(x, y, chef)){
-	if(ds_list_size(_list) < 8){
+	if(ds_list_size(_list) <= global.max_inventory){
 		picked = true
 		if(_pos_in_list = -1){
 			ds_list_add(_list, id)
 			quicksound(snd_pegar_item)
 		}
-	}else{
-		
-	}	
+	}
 }
 
 //Se estou sendo segurado, mudo minha posição para seguir o player

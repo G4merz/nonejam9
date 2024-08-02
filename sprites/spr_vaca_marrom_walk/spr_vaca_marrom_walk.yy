@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":63,
   "bbox_left":0,
-  "bbox_right":383,
+  "bbox_right":95,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,18 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"bc01d304-5717-4d33-95cd-2e5f81d9c473","name":"bc01d304-5717-4d33-95cd-2e5f81d9c473","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"24633088-bb28-4d78-8df8-4cbc7583fc03","name":"24633088-bb28-4d78-8df8-4cbc7583fc03","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"aa8462cf-ed94-4419-b667-3b3bfb6b437c","name":"aa8462cf-ed94-4419-b667-3b3bfb6b437c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"51eefe84-aed7-4311-8cff-b50102ef1f59","name":"51eefe84-aed7-4311-8cff-b50102ef1f59","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"fa693085-6208-4a6d-983b-6db4a967ff50","name":"fa693085-6208-4a6d-983b-6db4a967ff50","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"5b5b1437-3812-4c77-ab51-b27d000c22be","blendMode":0,"displayName":"default","isLocked":false,"name":"5b5b1437-3812-4c77-ab51-b27d000c22be","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"c4ea1eb7-0951-4e7d-9e08-15fc970f7bcd","blendMode":0,"displayName":"default","isLocked":false,"name":"c4ea1eb7-0951-4e7d-9e08-15fc970f7bcd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_vaca_marrom_walk",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Animais",
     "path":"folders/Sprites/Estande de tiro/Animais.yy",
@@ -49,7 +52,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":4.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -69,14 +72,23 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"bc01d304-5717-4d33-95cd-2e5f81d9c473","path":"sprites/spr_vaca_marrom_walk/spr_vaca_marrom_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"2cf112df-2f42-480d-b7d4-a3c3ffe322a9","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"24633088-bb28-4d78-8df8-4cbc7583fc03","path":"sprites/spr_vaca_marrom_walk/spr_vaca_marrom_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"8183aef7-012e-46cf-861f-a2029fc362c7","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"aa8462cf-ed94-4419-b667-3b3bfb6b437c","path":"sprites/spr_vaca_marrom_walk/spr_vaca_marrom_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"90e1ecb3-a22c-439c-bb69-d6c559b0135d","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"51eefe84-aed7-4311-8cff-b50102ef1f59","path":"sprites/spr_vaca_marrom_walk/spr_vaca_marrom_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fa263c3a-7525-4dd7-99ef-0a5601baff9f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fa693085-6208-4a6d-983b-6db4a967ff50","path":"sprites/spr_vaca_marrom_walk/spr_vaca_marrom_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"39dc0390-577e-46d6-a6ec-db38ad8d907f","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":48,
+    "yorigin":64,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +98,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":384,
+  "width":96,
 }

@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":47,
   "bbox_left":0,
-  "bbox_right":127,
+  "bbox_right":31,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,18 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"8fe7372a-a634-4460-8235-a21d7a35d8e3","name":"8fe7372a-a634-4460-8235-a21d7a35d8e3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"6ef972c9-db31-46c8-a780-f2ea5bfdaa27","name":"6ef972c9-db31-46c8-a780-f2ea5bfdaa27","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"70e721ff-4ec0-4c78-9b6f-cbe99651e767","name":"70e721ff-4ec0-4c78-9b6f-cbe99651e767","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"3b3404d2-5143-44cb-878a-88ee5402881b","name":"3b3404d2-5143-44cb-878a-88ee5402881b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"6e0ed5e6-97e2-4a71-bf81-3101864b9a64","name":"6e0ed5e6-97e2-4a71-bf81-3101864b9a64","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"67a21132-5f4f-4434-a39a-9b5bcdefb9c6","blendMode":0,"displayName":"default","isLocked":false,"name":"67a21132-5f4f-4434-a39a-9b5bcdefb9c6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"d3cb1ddc-1e80-42e7-a62a-f19af9c5151c","blendMode":0,"displayName":"default","isLocked":false,"name":"d3cb1ddc-1e80-42e7-a62a-f19af9c5151c","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_galinha_preta_walk",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Animais",
     "path":"folders/Sprites/Estande de tiro/Animais.yy",
@@ -49,7 +52,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":4.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -69,14 +72,23 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8fe7372a-a634-4460-8235-a21d7a35d8e3","path":"sprites/spr_galinha_preta_walk/spr_galinha_preta_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"5145836b-4666-424a-aa8d-f5518a3f9bc2","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6ef972c9-db31-46c8-a780-f2ea5bfdaa27","path":"sprites/spr_galinha_preta_walk/spr_galinha_preta_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fa448e7b-1c1b-4839-88df-947104c0e212","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"70e721ff-4ec0-4c78-9b6f-cbe99651e767","path":"sprites/spr_galinha_preta_walk/spr_galinha_preta_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"fd9bdeb2-0d75-463d-a234-b89a5b5d8114","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b3404d2-5143-44cb-878a-88ee5402881b","path":"sprites/spr_galinha_preta_walk/spr_galinha_preta_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c5359cd9-de16-41aa-a3ca-4992a1c35b3f","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6e0ed5e6-97e2-4a71-bf81-3101864b9a64","path":"sprites/spr_galinha_preta_walk/spr_galinha_preta_walk.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"4bb80e38-4ae8-4dd9-b18d-dc39620254a3","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":16,
+    "yorigin":48,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +98,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":128,
+  "width":32,
 }

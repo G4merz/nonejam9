@@ -9,8 +9,8 @@
   "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controladores",
-    "path":"folders/Objects/Controladores.yy",
+    "name":"Resolução e Câmera",
+    "path":"folders/Objects/Controladores/Resolução e Câmera.yy",
   },
   "parentObjectId":null,
   "persistent":false,

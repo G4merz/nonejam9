@@ -21,8 +21,6 @@ enum itens{
 	pizza,
 	farinha,
 	pao,
-	pao_cortado,
-	tomate_cortado,
 	macarrao,
 	burguer
 }
@@ -47,8 +45,6 @@ nomes =		[
 			"Pizza",
 			"Farinha",
 			"Pao",
-			"Pao Cortado",
-			"Tomate Cortado",
 			"Macarrao",
 			"Hamburguer"
 			]

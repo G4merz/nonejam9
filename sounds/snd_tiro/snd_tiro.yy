@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.906939,
+  "duration":1.044898,
   "name":"snd_tiro",
   "parent":{
     "name":"SFX",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_tiro.mp3",
+  "soundFile":"snd_tiro.MP3",
   "type":0,
   "volume":1.0,
 }

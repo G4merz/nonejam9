@@ -1,6 +1,7 @@
 var _up = keyboard_check_pressed(vk_up)
 var _down = keyboard_check_pressed(vk_down)
 var _confirm = keyboard_check_pressed(ord("Z"))
+var _quit = keyboard_check_pressed(ord("X"))
 
 var _prev_pos = pos
 
@@ -11,3 +12,5 @@ if(pos < 0) pos = option_length - 1
 if(_prev_pos != pos) audio_play_sound(snd_selection, 1, 0)
 
 option_length = array_length(option)
+
+if(_quit) instance_destroy()

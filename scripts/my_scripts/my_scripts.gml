@@ -117,15 +117,21 @@ function create_menu(_type){
 
 #region Enter Shooter e Quit Shooter
 
-function enter_shooter(){
+function enter_shooter(_mode){
 	//Entro no modo de tiro e reseto o delay
-	global.shooting = true
+	switch(_mode){ //Mudando a variável global.shooting
+		case "Animais": global.shooting = 1; break;
+		case "Plantas": global.shooting = 2; break;
+	}
 	global.shooting_delay = 10
 	
-	//Centralizando o mouse
+	//Centralizando o mouse e a mira
 	display_mouse_set(
 	window_get_x() + window_get_width() / 2,
 	window_get_y() + window_get_height() / 2)
+	
+	obj_shooter.mirax = obj_camera.cw_current / 2
+	obj_shooter.miray = obj_camera.ch_current / 2
 }
 
 function quit_shooter(){
@@ -140,6 +146,89 @@ function quit_shooter(){
 
 function quicksound(_sound){
 	audio_play_sound(_sound, 1, 0)
+}
+
+#endregion
+
+#region Funções de inventário
+
+//Função para checar se tem algum item
+function check_inventory(){
+	var _item_existe = 0
+	for(var i = 0; i < ds_list_size(global.inventory); i++){
+		for(var j = 0; j < argument_count; j++){
+			if(global.inventory[| i].nome == argument[j]){
+				_item_existe++
+			}
+		}
+	}
+	
+	return floor(_item_existe / argument_count)
+}
+
+//Função pra checar se o inventário está cheio
+function inventory_full(){
+	return !(ds_list_size(global.inventory) < global.max_inventory)
+}
+
+//Função para adicionar um item ao inventário com base na enum "itens"
+function add_item(_index, _amount = 1){
+	repeat(_amount){
+		var _inst = instance_create_layer(obj_chefinho.x, obj_chefinho.y, "itens", obj_item)
+		_inst.index = _index
+		if(ds_list_size(global.inventory) < global.max_inventory) ds_list_add(global.inventory, _inst)
+	}
+}
+
+//Função para remover itens do inventário pelo nome (remove o primeiro de cima para baixo)
+function remove_item(){
+	for(var i = ds_list_size(global.inventory) - 1; i > -1; i--){
+		for(var j = 0; j < argument_count; j++){
+			if(global.inventory[| i].nome == argument[j]){
+				instance_destroy(global.inventory[| i])
+				ds_list_delete(global.inventory, i)
+				return
+			}
+		}
+	}
+}
+
+//Função pra limpar o inventário
+function clear_inventory(){
+	for(var i = ds_list_size(global.inventory) - 1; i > -1; i--){
+		remove_item(global.inventory[| i].nome)
+	}
+}
+
+//Função que faz uma receita de uma vez só
+function do_recipe(){
+	//Definindo minhas variáveis
+	var _arg_off = (asset_get_type(argument[argument_count - 1]) == asset_sound) + 1
+	var _checked = 0
+	var _ingred_count = argument_count - _arg_off
+	var _result = _ingred_count
+	
+	var _sound = -1
+	if(_arg_off = 2) var _sound = argument[argument_count - 1]
+	
+	//Primeiro, faço a checagem dos ingredientes.
+	for(var i = 0; i < _ingred_count; i++){
+		if(check_inventory(argument[i])) _checked++
+	}
+	
+	//Depois, verifico se todos estão presentes
+	if(floor(_checked / _ingred_count == true)){
+		//Removo os itens necessários
+		for(var i = 0; i < _ingred_count; i++){
+			remove_item(argument[i])
+		}
+		
+		//Adiciono o resultado
+		add_item(argument[_result])
+		
+		//E por último, toco o som
+		if(_sound != -1) quicksound(_sound)
+	}
 }
 
 #endregion

@@ -13,15 +13,7 @@ if(_confirm){
 		do_recipe("Cacau", itens.chocolate)
 		break
 		
-		case 1: //Pão Cortado
-		do_recipe("Pao", itens.pao_cortado)
-		break
-		
-		case 2: //Tomate Cortado
-		do_recipe("Tomate", itens.tomate_cortado, snd_cortar_tomate)
-		break
-		
-		case 3: //Sair
+		case 1: //Sair
 		instance_destroy()
 		break
 	}

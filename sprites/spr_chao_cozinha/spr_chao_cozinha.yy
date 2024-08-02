@@ -2,9 +2,9 @@
   "$GMSprite":"",
   "%Name":"spr_chao_cozinha",
   "bboxMode":0,
-  "bbox_bottom":95,
+  "bbox_bottom":127,
   "bbox_left":0,
-  "bbox_right":119,
+  "bbox_right":159,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"a99332d1-7faf-40c6-8565-c12e2450c6b1","name":"a99332d1-7faf-40c6-8565-c12e2450c6b1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"ee6a338f-b694-4cc8-9640-cd1e2cbf6f60","name":"ee6a338f-b694-4cc8-9640-cd1e2cbf6f60","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":96,
+  "height":128,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"6d369d41-9b77-4a1e-82fd-0cf139e8d1d7","blendMode":0,"displayName":"default","isLocked":false,"name":"6d369d41-9b77-4a1e-82fd-0cf139e8d1d7","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"3d881e59-b850-4916-91a6-a9d6bee5f1e9","blendMode":0,"displayName":"default","isLocked":false,"name":"3d881e59-b850-4916-91a6-a9d6bee5f1e9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_chao_cozinha",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a99332d1-7faf-40c6-8565-c12e2450c6b1","path":"sprites/spr_chao_cozinha/spr_chao_cozinha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"1a8f6d2d-a3ee-46ea-a56f-32ff78adbf30","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ee6a338f-b694-4cc8-9640-cd1e2cbf6f60","path":"sprites/spr_chao_cozinha/spr_chao_cozinha.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"0a6eb38a-784e-4d94-a252-e8f193c6178a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":120,
+  "width":160,
 }
