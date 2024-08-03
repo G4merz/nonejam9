@@ -25,6 +25,8 @@ for(var i = 0; i < instance_number(obj_shooter_entity); i++){
 for(var i = 0; i < ds_list_size(_dlist); i++){
 	var _inst2 = _dlist[| i]
 	draw_sprite_ext(_inst2.sprite, _inst2.image_ind, _inst2.x, _inst2.y, _inst2.dir * _inst2.image_xscale, _inst2.image_yscale, 0, c_white, _inst2.alpha)
+	//Hitboxes
+	//draw_rectangle(_inst2.x - sprite_get_width(_inst2.sprite) / 2, _inst2.y - sprite_get_height(_inst2.sprite), _inst2.x + sprite_get_width(_inst2.sprite) / 2, _inst2.y, false)
 }
 
 ds_list_destroy(_dlist)
@@ -32,9 +34,21 @@ ds_list_destroy(_dlist)
 
 draw_sprite_ext(spr_shooter_fg, 0, 0, 0, 1, 1, 0, c_white, alpha) //Frontground
 
-draw_sprite_ext(spr_arma, 0, _c.cw_current, _c.ch_current, 1, 1, 0, c_white, alpha) //Arma
 draw_sprite_ext(spr_mira, 0, mirax, miray, 2, 2, 0, c_white, alpha) //Mira
-//draw_circle(mirax, miray, mirar, false) //Raio da mira
+
+#region Arma
+
+var _xoff_arma = 20 + ((mirax - _c.cw_current / 2) / (_c.cw_current / 2)) * 40
+var _yoff_arma = 30 + ((miray - _c.ch_current / 2) / (_c.ch_current / 2)) * 40
+var _xarma = _c.cw_current + _xoff_arma
+var _yarma = _c.ch_current + _yoff_arma
+var _alpha_diff = 0
+if(point_in_rectangle(mirax, miray, _xarma - sprite_get_width(spr_arma), _yarma - sprite_get_height(spr_arma), _xarma, _yarma)){
+	_alpha_diff = 0.5
+}
+draw_sprite_ext(spr_arma, 0, _xarma, _yarma, 1, 1, 0, c_white, alpha - _alpha_diff) //Arma
+
+#endregion
 
 #region Contadores 
 var _counterw = sprite_get_width(spr_contador_balas)

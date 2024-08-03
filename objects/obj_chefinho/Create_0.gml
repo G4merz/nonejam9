@@ -35,11 +35,11 @@ sprites = [
 //Controlando o player
 control = function(){
 	//Bindings
-	var _up = keyboard_check(vk_up)
-	var _left = keyboard_check(vk_left)
-	var _down = keyboard_check(vk_down)
-	var _right = keyboard_check(vk_right)
-	var _dash = keyboard_check_pressed(ord("C"))
+	var _up = keyboard_check(ord("W"))
+	var _left = keyboard_check(ord("A"))
+	var _down = keyboard_check(ord("S"))
+	var _right = keyboard_check(ord("D"))
+	var _dash = keyboard_check_pressed(vk_space)
 
 	//Ajustando o lado em que estou olhando (dependendo do estado, não posso mudar a face)
 	if(texto_estado = "parado" or texto_estado = "movendo"){
@@ -103,11 +103,11 @@ estado_parado = function(){
 	velh = 0
 	velv = 0
 	
-	//Pegando minhas teclinhas
-	var _up = keyboard_check(vk_up)
-	var _left = keyboard_check(vk_left)
-	var _down = keyboard_check(vk_down)
-	var _right = keyboard_check(vk_right)
+	//Bindings
+	var _up = keyboard_check(ord("W"))
+	var _left = keyboard_check(ord("A"))
+	var _down = keyboard_check(ord("S"))
+	var _right = keyboard_check(ord("D"))
 	
 	//Definindo a sprite correta
 	animando(0)

@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":175.02037,
+  "duration":175.04652,
   "name":"msc_caca_masterchef",
   "parent":{
     "name":"Sounds",

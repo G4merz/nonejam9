@@ -28,7 +28,10 @@ vel = 0
 sprite = sprite_index
 alpha = 0
 shooting_mode = 1
-scale = 1
+
+var _ymin = room_height / 2
+var _ymax = room_height  - 65
+scale = 0.8 + ((y - _ymin) / (_ymax - _ymin) * 0.6)
 
 idle_spr = spr_vaca_preta_idle
 walk_spr = spr_vaca_preta_walk

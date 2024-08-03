@@ -25,7 +25,7 @@
   ],
   "name":"spr_papeis_pedido",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"Área da cozinha",
     "path":"folders/Sprites/Área da cozinha.yy",
@@ -83,7 +83,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":4,
     "yorigin":0,
   },
   "swatchColours":null,

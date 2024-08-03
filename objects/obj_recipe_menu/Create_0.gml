@@ -14,10 +14,10 @@ option =	[
 			"Queijo", 
 			"Farinha",
 			"Manteiga",
-			"Pão",
 			"Molho",
 			"Carne Assada", 
-			"Massa", 
+			"Massa",
+			"Pão",
 			"Achocolatado", 
 			"Bolo", 
 			"Bolo de Chocolate", 
@@ -52,6 +52,11 @@ description =	[
 option_length = array_length(option)
 
 global.paused = true
+
+//Escalas das opções
+scale_esq = 1
+scale_dir = 1
+scale_x = 1
 
 //Adicionando um delay pra abrir o menu, assim quando o player for fazer queijo o menu ainda abre.
 usable = false

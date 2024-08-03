@@ -2,4 +2,4 @@
 event_inherited()
 
 //Definindo as opções
-option = ["Chocolate", "Sair"]
+option = ["Chocolate", "Massa", "Achocolatado", "Hambúrguer", "Sair"]

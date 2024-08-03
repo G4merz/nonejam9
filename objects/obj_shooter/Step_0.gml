@@ -6,7 +6,7 @@ center_y = obj_camera.ch_current / 2
 alpha = approach(alpha, (global.shooting) ? 1 : 0, 0.1)
 
 //Saindo do modo de tiro caso eu esteja nele
-if(keyboard_check_pressed(ord("X")) and global.shooting_delay = 0 and global.shooting){
+if(keyboard_check_pressed(vk_escape) and global.shooting_delay = 0 and global.shooting){
 	quit_shooter()
 }
 
@@ -14,8 +14,8 @@ if(keyboard_check_pressed(ord("X")) and global.shooting_delay = 0 and global.sho
 global.shooting_delay = approach(global.shooting_delay, 0, 1)
 
 //Mudando a posição da mira
-mirax = lerp(mirax, mouse_x, 0.3)
-miray = lerp(miray, mouse_y, 0.3)
+mirax = lerp(mirax, mouse_x, 0.4)
+miray = lerp(miray, mouse_y, 0.4)
 
 #region Mira e tiros
 
@@ -24,23 +24,24 @@ if(global.shooting) window_set_cursor(cr_none)
 else window_set_cursor(cr_arrow)
 
 var _tiro = mouse_check_button_released(mb_left) //Botão do tiro
+array_insert_shift(shot_input_array, 0, _tiro)
 
 //Se eu estiver no modo de tiro e atirar, rodo o código abaixo
-if(_tiro and global.shooting 
+if(shot_input() and global.shooting 
 and espera_tiro = 0 and global.balas > 0){
 	audio_play_sound(snd_tiro, 1, 0)
 	espera_tiro = tempo_tiro
 	global.balas--
 	played = false
+	array_resize(shot_input_array, 0)
 	
 	#region Checando quais entidades estão no lugar da mira e dando dano apenas na mais em cima
 	var _list = ds_list_create()
-	var _pos = collision_circle_list(mirax, miray, mirar, obj_shooter_entity, false, true, _list, false)
+	var _pos = instance_position_list(mirax, miray, obj_shooter_entity, _list, false)
 	var _damaged_inst = noone
 	for(var i = 0; i < ds_list_size(_list); i++){
-		if(_damaged_inst = noone or 
-		(_damaged_inst.y < _list[| i].y and 
-		_list[| i].shooting_mode = global.shooting)){
+		if((_damaged_inst = noone or _damaged_inst.y < _list[| i].y) 
+		and _list[| i].shooting_mode = global.shooting){
 			_damaged_inst = _list[| i]
 		}
 	}
@@ -48,22 +49,20 @@ and espera_tiro = 0 and global.balas > 0){
 	//Se a instancia existir, dou dano nela. 
 	if(_damaged_inst != noone){
 		_damaged_inst.vida--
-		show_message("POGGERS")
-		}
+	}
 	
 	ds_list_destroy(_list)
 	#endregion
 }
 
-
 //Diminuindo o cooldown
 espera_tiro = approach(espera_tiro, 0, 1)
-if(espera_tiro <= seconds(1) and !played and global.balas > 0) {
+if(espera_tiro <= seconds(.55) and !played and global.balas > 0) {
 	quicksound(snd_recarga)
 	played = true
 }
 
-if(keyboard_check_pressed(vk_space)) global.balas++
+//if(keyboard_check_pressed(vk_space)) global.balas++
 
 #endregion
 

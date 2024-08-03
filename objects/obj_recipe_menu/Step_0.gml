@@ -1,6 +1,6 @@
-var _left = keyboard_check_pressed(vk_left)
-var _right = keyboard_check_pressed(vk_right)
-var _quit = keyboard_check_pressed(ord("X"))
+var _left = keyboard_check_pressed(ord("A"))
+var _right = keyboard_check_pressed(ord("D"))
+var _quit = keyboard_check_pressed(vk_escape)
 
 var _prev_pos = pos
 

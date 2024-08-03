@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Área da cozinha",
-    "path":"folders/Sprites/Área da cozinha.yy",
+    "name":"Menus",
+    "path":"folders/Sprites/Menus.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

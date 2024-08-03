@@ -19,13 +19,13 @@
     {"$GMSpriteFrame":"","%Name":"637d7816-7911-4e83-8ff2-a3cc309df6ad","name":"637d7816-7911-4e83-8ff2-a3cc309df6ad","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"69418ef4-3aba-4bb2-bad5-9155febee762","name":"69418ef4-3aba-4bb2-bad5-9155febee762","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"f76183f1-d819-4e11-a0f4-c942376e56b9","name":"f76183f1-d819-4e11-a0f4-c942376e56b9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"e83eda8e-89d8-4c67-8018-2de11f777472","name":"e83eda8e-89d8-4c67-8018-2de11f777472","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"b0471704-ff57-4d51-ab76-14c4846d49cf","name":"b0471704-ff57-4d51-ab76-14c4846d49cf","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"0dd3fb4d-5cc5-4ade-930c-ef330f76d665","name":"0dd3fb4d-5cc5-4ade-930c-ef330f76d665","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"8e189927-6cc3-4b94-9341-9b1623f2430a","name":"8e189927-6cc3-4b94-9341-9b1623f2430a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"3dc56d8f-6795-4345-a5cf-d61a7f395f8a","name":"3dc56d8f-6795-4345-a5cf-d61a7f395f8a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"c42bbb5d-1eea-462e-a883-9d9aae853fa7","name":"c42bbb5d-1eea-462e-a883-9d9aae853fa7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"a1cf92a0-1262-4c4d-a23c-3a039975d39a","name":"a1cf92a0-1262-4c4d-a23c-3a039975d39a","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e83eda8e-89d8-4c67-8018-2de11f777472","name":"e83eda8e-89d8-4c67-8018-2de11f777472","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -103,26 +103,26 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f76183f1-d819-4e11-a0f4-c942376e56b9","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"fca0fb5d-395e-4518-8057-aec2ffff598c","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e83eda8e-89d8-4c67-8018-2de11f777472","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d390c48c-0e7b-4205-a2f4-61783dcab7d7","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"b0471704-ff57-4d51-ab76-14c4846d49cf","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"8c653708-ae6f-4d6f-8d40-347e8889be32","IsCreationKey":false,"Key":7.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"8c653708-ae6f-4d6f-8d40-347e8889be32","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"0dd3fb4d-5cc5-4ade-930c-ef330f76d665","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"86df6ee5-8e59-4ef0-8541-52c81a226624","IsCreationKey":false,"Key":8.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"86df6ee5-8e59-4ef0-8541-52c81a226624","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8e189927-6cc3-4b94-9341-9b1623f2430a","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a2bba5db-e1bc-4ef9-8dc4-c0b17cc3ab69","IsCreationKey":false,"Key":9.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"a2bba5db-e1bc-4ef9-8dc4-c0b17cc3ab69","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3dc56d8f-6795-4345-a5cf-d61a7f395f8a","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3923fa68-a236-44e9-8279-6a6789e6dc3b","IsCreationKey":false,"Key":10.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"3923fa68-a236-44e9-8279-6a6789e6dc3b","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"c42bbb5d-1eea-462e-a883-9d9aae853fa7","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"7a895f00-7233-4c0c-8b67-abf6508bb7e9","IsCreationKey":false,"Key":11.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"7a895f00-7233-4c0c-8b67-abf6508bb7e9","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a1cf92a0-1262-4c4d-a23c-3a039975d39a","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"44baf3b0-3569-42e2-80c0-892a33948f9f","IsCreationKey":false,"Key":12.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e83eda8e-89d8-4c67-8018-2de11f777472","path":"sprites/spr_receitas/spr_receitas.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"d390c48c-0e7b-4205-a2f4-61783dcab7d7","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"44baf3b0-3569-42e2-80c0-892a33948f9f","IsCreationKey":false,"Key":13.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
