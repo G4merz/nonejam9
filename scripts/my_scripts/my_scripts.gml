@@ -25,9 +25,9 @@ return argument0;
 
 #region Chance
 /// @function				chance(_chance)
-/// @param {real} _chance	Chance em porcentagem (de 0 a 1)
+/// @param {real} _chance	Chance (de 0 a 1)
 
-/*Essa função gera um número aleatório entre 0 e 1, e retorna se aquele número é menor
+/*Essa função gera um número aleatório entre 0 e 1, e retorna se aquele número é menos
 do que o número desejado*/
 function chance(_chance){
 	return _chance > random(1);
@@ -108,6 +108,7 @@ function create_menu(_type){
 		case "forno": _menu = obj_forno_menu; break
 		case "pote": _menu = obj_pote_menu; break
 		case "tabua": _menu = obj_tabua_menu; break
+		case "box": _menu = obj_caixa_menu; break
 	}
 	
 	instance_create_depth(20, 20, -9000, _menu)
@@ -172,11 +173,11 @@ function inventory_full(){
 }
 
 //Função para adicionar um item ao inventário com base na enum "itens"
-function add_item(_index, _amount = 1){
+function add_item(_index, _amount = 1, _play_sound = true){
 	repeat(_amount){
 		var _inst = instance_create_layer(obj_chefinho.x, obj_chefinho.y, "itens", obj_item)
 		_inst.index = _index
-		if(ds_list_size(global.inventory) < global.max_inventory) ds_list_add(global.inventory, _inst)
+		_inst.play_sound = _play_sound
 	}
 }
 
@@ -224,11 +225,23 @@ function do_recipe(){
 		}
 		
 		//Adiciono o resultado
-		add_item(argument[_result])
+		add_item(argument[_result], 1, 0)
 		
 		//E por último, toco o som
 		if(_sound != -1) quicksound(_sound)
 	}
+}
+
+#endregion
+
+#region Reset Global Variables
+
+function reset_game(){
+	global.paused = false
+	global.balas = 10
+	global.shooting = false
+	clear_inventory()
+	game_restart()
 }
 
 #endregion

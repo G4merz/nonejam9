@@ -105,11 +105,11 @@ draw_sprite_ext(spr_seta, _ind, _x2, _y2, scale_dir * -1, scale_dir, 0, c_white,
 #endregion
 
 #region Sair
-var _x3 = _cx + _sprw / 2 + 10
+var _x3 = _cw / 2
 var _y3 = _cy + _sprw / 2 + 10
 
 if(point_in_rectangle(mouse_x, mouse_y, _x3 - _sprw / 2, _y3 - _sprh / 2, _x3 + _sprw / 2, _y3 + _sprh / 2)){
-	scale_x = lerp(scale_x, 1.4, 0.05)
+	scale_x = lerp(scale_x, 1.3, 0.05)
 	if(mouse_check_button_pressed(mb_left)){
 		instance_destroy()
 	}

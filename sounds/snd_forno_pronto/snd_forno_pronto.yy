@@ -12,8 +12,8 @@
   "duration":0.783625,
   "name":"snd_forno_pronto",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Cozinha",
+    "path":"folders/Sounds/SFX/Cozinha.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

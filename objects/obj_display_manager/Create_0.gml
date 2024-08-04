@@ -65,7 +65,7 @@ surface_resize(application_surface, ideal_width * window_size, ideal_height * wi
 alarm[0] = 1 //Fazendo o window_center() 1 frame depois, assim ele funciona
 
 //E agora vou pra room inicial
-room_goto(rm_testes)
+room_goto(rm_game)
 
 //Função pra mudar o aspect ratio
 change_resolution = function(_aspect_ratio, _height){

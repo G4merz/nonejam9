@@ -12,8 +12,8 @@
   "name":"obj_recipe_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menu",
-    "path":"folders/Objects/Controladores/Menu.yy",
+    "name":"Menus",
+    "path":"folders/Objects/Controladores/Menus.yy",
   },
   "parentObjectId":null,
   "persistent":false,

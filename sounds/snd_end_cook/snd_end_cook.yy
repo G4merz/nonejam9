@@ -12,8 +12,8 @@
   "duration":1.332188,
   "name":"snd_end_cook",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Cozinha",
+    "path":"folders/Sounds/SFX/Cozinha.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

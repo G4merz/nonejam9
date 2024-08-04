@@ -1,5 +1,12 @@
-//Isso representa se eu estou sendo carregado ou não
-picked = false
+//Estados do item
+enum item_states{
+	dropped,
+	player,
+	stored
+}
+
+estado = item_states.dropped
+play_sound = true
 
 //Essa ENUM serve para acessar as sprites dos itens de forma fácil
 enum itens{
@@ -50,7 +57,7 @@ nomes =		[
 			]
 
 //Randomizando a sprite (temporário, apenas para testes)
-index = irandom_range(0, itens.pizza)
+//index = irandom_range(0, itens.pizza)
 nome = ""
 
 //Variáveis de posição manuais para um movimento suave

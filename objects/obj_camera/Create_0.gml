@@ -4,10 +4,10 @@ enum camera_states{
 	follow_point
 }
 
-camera_state = camera_states.follow_point
+camera_state = camera_states.follow_object
 
 //Variável que define que objeto vou seguir
-seguindo = noone
+seguindo = global.player_object
 
 /*Com essa variável posso "destravar" o zoom da câmera e colocar no que eu quiser,
 desde que este valor esteja no limite*/

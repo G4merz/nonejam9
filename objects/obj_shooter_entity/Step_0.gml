@@ -2,6 +2,10 @@
 image_xscale = scale
 image_yscale = scale
 
+
+//Definindo a máscara de colisão
+mask_index = sprite
+
 /*Se o cooldown do estado acabar, eu tenho 50% de chance de mudar de estado e mudo o tempo
 do cooldown*/
 if(espera_estado = 0){
@@ -32,13 +36,14 @@ if(estado = "idle"){
 //Animando
 animando()
 
-//Mudando o alpha
+//Mudando os alphas
 alpha = approach(alpha, (shooting_mode = global.shooting) ? 1 : 0, 0.1)
+d_alpha = approach(d_alpha, 0, 0.05)
 
-//Dando um item novo caso eu morra
-morrer()
+//Diminuindo a tremedeira
+shake = approach(shake, 0, 0.2)
 
-//Me destruindo caso eu saia da room
+#region Me destruindo caso eu saia da room
 if(x > 0 and x < room_width){
 	spawned = true
 }
@@ -46,3 +51,4 @@ if(x > 0 and x < room_width){
 if(x < 0 - sprite_get_width(sprite) * scale or x > room_width + sprite_get_width(sprite) * scale and spawned){
 	instance_destroy()
 }
+#endregion

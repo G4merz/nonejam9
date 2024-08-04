@@ -2,15 +2,15 @@
 event_inherited()
 if(!usable) exit //Saindo do step caso eu não consiga usar o menu
 
-if(confirm){
+if(confirm or (confirm_2 and hovering)){
 
 	switch(pos){
 		case 0: //Chocolate
-		do_recipe("Cacau", itens.chocolate)
+		do_recipe("Cacau", itens.chocolate, snd_poof)
 		break
 		
 		case 1: //Massa
-		do_recipe("Farinha", "Ovo", itens.massa)
+		do_recipe("Farinha", "Ovo", itens.massa, snd_poof)
 		break
 		
 		case 2: //Nescau
@@ -18,7 +18,7 @@ if(confirm){
 		break
 		
 		case 3: //Hambúrguer
-		do_recipe("Pao", "Tomate", "Queijo", "Carne Assada", itens.burguer)
+		do_recipe("Pao", "Tomate", "Queijo", "Carne Assada", itens.burguer, snd_poof)
 		break
 		
 		case 4: //Sair

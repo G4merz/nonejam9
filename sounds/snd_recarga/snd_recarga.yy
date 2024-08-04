@@ -12,8 +12,8 @@
   "duration":0.731429,
   "name":"snd_recarga",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Estandes",
+    "path":"folders/Sounds/SFX/Estandes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

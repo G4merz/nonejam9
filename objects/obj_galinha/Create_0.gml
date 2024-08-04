@@ -24,3 +24,8 @@ idle_spr = asset_get_index(spr + "_idle")
 walk_spr = asset_get_index(spr + "_walk")
 
 image_spd = 8 / game_get_speed(gamespeed_fps) //Velocidade manual (10 FPS)
+
+som_dano = function(){
+	audio_play_sound((choose(snd_galinha_dano1, snd_galinha_dano2)), 1, 0, 
+	1, 0, random_range(.8, 1.2))
+}

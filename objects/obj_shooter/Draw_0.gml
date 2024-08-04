@@ -24,7 +24,7 @@ for(var i = 0; i < instance_number(obj_shooter_entity); i++){
 
 for(var i = 0; i < ds_list_size(_dlist); i++){
 	var _inst2 = _dlist[| i]
-	draw_sprite_ext(_inst2.sprite, _inst2.image_ind, _inst2.x, _inst2.y, _inst2.dir * _inst2.image_xscale, _inst2.image_yscale, 0, c_white, _inst2.alpha)
+	_inst2.draw()
 	//Hitboxes
 	//draw_rectangle(_inst2.x - sprite_get_width(_inst2.sprite) / 2, _inst2.y - sprite_get_height(_inst2.sprite), _inst2.x + sprite_get_width(_inst2.sprite) / 2, _inst2.y, false)
 }

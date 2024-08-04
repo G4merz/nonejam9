@@ -48,7 +48,7 @@ and espera_tiro = 0 and global.balas > 0){
 	
 	//Se a instancia existir, dou dano nela. 
 	if(_damaged_inst != noone){
-		_damaged_inst.vida--
+		_damaged_inst.dano()
 	}
 	
 	ds_list_destroy(_list)
@@ -73,7 +73,7 @@ if(espera_entidade = 0){
 	var _obj, _obj_type, _dir, _ex, _ey
 	_obj_type = choose("animal", "planta")
 	switch(_obj_type){
-		case "animal": _obj = choose(obj_vaca, obj_galinha); break
+		case "animal": _obj = (chance(0.98)) ? choose(obj_vaca, obj_galinha, obj_galinha) : obj_vaca_estrela; break
 		case "planta": _obj = choose(obj_cacau, obj_trigo, obj_tomate); break
 	}
 	_dir = choose(-1, 1)

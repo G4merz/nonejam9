@@ -8,11 +8,11 @@ global.player_object = obj_chefinho
 global.balas = 10
 
 //Variável da dificuldade (0-3)
-global.dificuldade = 0
+global.dificuldade = 1
 
 //DS List do inventário
 global.inventory = ds_list_create()
-global.max_inventory = 8
+global.max_inventory = 6
 
 //Variável que definem se o jogo está pausado ou não
 global.paused = false

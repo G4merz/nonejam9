@@ -9,9 +9,13 @@ spd_multi = 1
 tempo_dash = seconds(0.75)
 espera_dash = 0
 
+//Variáveis pra tocar o som de passo
+cd_passo = seconds(.3)
+espera_passo = 0
+
 //Variáveis de desenho
-image_spd = 4 / game_get_speed(gamespeed_fps) //Velocidade manual (4 FPS)
-def_image_spd = 4 / game_get_speed(gamespeed_fps) //Velocidade manual padrão
+image_spd = 5 / game_get_speed(gamespeed_fps) //Velocidade manual (4 FPS)
+def_image_spd = image_spd
 
 sprites = [
 			//Sprites Parado
@@ -28,7 +32,7 @@ sprites = [
 			spr_chefinho_walk_up,
 			spr_chefinho_walk_side,
 			spr_chefinho_walk_down,
-			12
+			14
 			]
 ]
 
@@ -99,6 +103,8 @@ estado_parado = function(){
 	//Controlando o player
 	control()
 	
+	espera_passo = 0
+	
 	//Ficando parado
 	velh = 0
 	velv = 0
@@ -127,6 +133,19 @@ estado_movendo = function(){
 	
 	//Controlando o player
 	control()
+	
+	//Diminuindo o cooldown do som de passo e tocando quando acabar
+	if(espera_passo = 0){
+		if(place_meeting(x, y, obj_chao_xadrez)){
+			audio_play_sound(snd_passo_balcao, 1, 0, 2, 0, random_range(0.7, 1.3))
+		}else if(place_meeting(x, y, obj_chao_grama)){
+			audio_play_sound(snd_passo_grama, 1, 0, 2, 0, random_range(0.7, 1.3))
+		}
+		
+		espera_passo = cd_passo
+	}
+	
+	espera_passo = approach(espera_passo, 0, 1)
 
 	//Se eu ficar parado, mudo pro estado parado
 	if(velh = 0 and velv = 0){

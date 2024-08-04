@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":285.12653,
+  "duration":0.0,
   "name":"msc_caca_normal",
   "parent":{
     "name":"Sounds",

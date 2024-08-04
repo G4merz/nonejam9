@@ -23,7 +23,6 @@ for(var i = 0; i < option_length; i++){
 	var _c = c_white
 	
 	if(pos == i) _c = c_yellow
-	
 	draw_text_color(x + borda, y + borda + espaco * i, option[i],
 	_c, _c, _c, _c, 1)
 }

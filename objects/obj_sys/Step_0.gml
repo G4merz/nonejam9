@@ -4,7 +4,7 @@ if(global.dificuldade < 3){
 	prev_shooter_volume = shooter_volume
 
 	kitchen_volume = !global.shooting
-	if(prev_kitchen_volume != kitchen_volume) audio_sound_gain(msc_cozinha, kitchen_volume, fade_spd)
+	if(prev_kitchen_volume != kitchen_volume) audio_sound_gain(msc_cozinha_1, kitchen_volume, fade_spd)
 	prev_kitchen_volume = kitchen_volume
 }
 

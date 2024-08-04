@@ -12,8 +12,8 @@
   "duration":1.044898,
   "name":"snd_tiro",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Estandes",
+    "path":"folders/Sounds/SFX/Estandes.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

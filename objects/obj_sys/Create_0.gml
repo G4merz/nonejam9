@@ -6,7 +6,7 @@ if(global.dificuldade < 3){
 	shooter_volume = 0
 	prev_shooter_volume = shooter_volume
 
-	kitchen_music = msc_cozinha
+	kitchen_music = msc_cozinha_1
 	kitchen_volume = 1
 	prev_kitchen_volume = kitchen_volume
 

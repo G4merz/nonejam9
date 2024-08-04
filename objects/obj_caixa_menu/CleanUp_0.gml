@@ -1,0 +1,2 @@
+ds_list_destroy(caixa_option)
+ds_list_destroy(player_option)

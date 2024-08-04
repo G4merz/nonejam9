@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Utilitários da cozinha",
-    "path":"folders/Objects/Controladores/Menu/Utilitários da cozinha.yy",
+    "path":"folders/Objects/Controladores/Menus/Utilitários da cozinha.yy",
   },
   "parentObjectId":{
     "name":"obj_cook_menu",

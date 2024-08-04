@@ -2,11 +2,11 @@
 event_inherited()
 if(!usable) exit //Saindo do step caso eu não consiga usar o menu
 
-if(confirm){
+if(confirm or (confirm_2 and hovering)){
 
 	switch(pos){
 		case 0: //Pão
-		do_recipe("Massa", itens.pao)
+		do_recipe("Massa", itens.pao, snd_forno_pronto)
 		break	
 		
 		case 1: //Queijo

@@ -10,6 +10,10 @@ spawned = false
 //Item que vou dar quando morrer
 item = itens.burguer
 
+
+//Som de tomar dano
+damage_sound = noone
+
 //Cooldown
 min_cd = 1
 max_cd = 1
@@ -27,7 +31,9 @@ vel = 0
 //Animação
 sprite = sprite_index
 alpha = 0
+d_alpha = 0
 shooting_mode = 1
+shake = 0
 
 var _ymin = room_height / 2
 var _ymax = room_height  - 65
@@ -54,10 +60,38 @@ animando = function(){
 }
 
 morrer = function(){
+	add_item(item)
+
+	var _inst = instance_create_depth(x, y - sprite_get_height(sprite), -2000, obj_get_item)
+	_inst.sprite_index = spr_ingredientes
+	_inst.image_index = item
+
+	instance_destroy()
+}
+
+///@method som_dano		
+///@description Altere esta função quando a entidade tiver que tocar algum som quando sofre dano.
+som_dano = function(){
+
+}
+
+dano = function(_dano = 1){
+	vida -= _dano
+	shake = 5
+	d_alpha = 1.5
+	som_dano()
+	
 	if(vida <= 0){
-		add_item(item)
-		instance_destroy()
+		morrer()
 	}
+}
+
+draw = function(){
+	var _xoff = random_range(-shake, shake)
+	var _yoff = random_range(-shake, shake)
+	
+	draw_sprite_ext(sprite, image_ind, x + _xoff, y + _yoff, dir * image_xscale, image_yscale, 0, c_white, alpha)
+	draw_sprite_ext(sprite, image_ind, x + _xoff, y + _yoff, dir * image_xscale, image_yscale, 0, c_red, d_alpha)
 }
 
 /* Copie aqui para criar um novo bicho

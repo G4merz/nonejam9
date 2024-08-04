@@ -12,8 +12,8 @@
   "duration":1.032,
   "name":"snd_pegar_item",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Cozinha",
+    "path":"folders/Sounds/SFX/Cozinha.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

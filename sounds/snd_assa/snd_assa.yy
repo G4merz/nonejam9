@@ -12,8 +12,8 @@
   "duration":2.089796,
   "name":"snd_assa",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Cozinha",
+    "path":"folders/Sounds/SFX/Cozinha.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
