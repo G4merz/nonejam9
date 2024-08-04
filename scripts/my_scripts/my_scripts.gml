@@ -109,6 +109,7 @@ function create_menu(_type){
 		case "pote": _menu = obj_pote_menu; break
 		case "tabua": _menu = obj_tabua_menu; break
 		case "box": _menu = obj_caixa_menu; break
+		case "pause": _menu = obj_pause_menu; break
 	}
 	
 	instance_create_depth(20, 20, -9000, _menu)

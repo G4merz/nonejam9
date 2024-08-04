@@ -19,32 +19,47 @@ for(var i = 0; i < array_length(pedido); i++){
 		if(starting > 0) pedido[i] = irandom(3)
 		else pedido[i] = irandom(array_length(pedidos) - 1)
 		
-		espera_pedido = seconds(irandom_range(1, 1))
+		espera_pedido = cd_pedido
 		quicksound(snd_sino_pedido)
-		#region Rodando uma verificação nos clientes para não adicionar um de cor repetida
-		var _c = spr_cliente_vermelho
 		
-		for(var j = 0; j < ds_list_size(clientes); j++){
-			if(clientes[| j] == spr_cliente_vermelho){
-				_c = spr_cliente_azul
-			}else if(clientes[| j] == spr_cliente_azul){
-				_c = spr_cliente_verde
-			}else if(clientes[| j] == spr_cliente_verde){
-				_c = spr_cliente_vermelho
-			}
-		}
-		
-		ds_list_add(clientes, _c)
-		#endregion
+		//Redefinindo tempo do pedido
+		tempo_pedido[i] = seconds(30)
+
+		//Adicionando cliente
+		clients[i] = instance_create_depth(x + 3 + (sprite_width / 2) * i, y + 50, depth - 10, obj_cliente)
+		clients[i].type = irandom(clientes.peixe)
 		break
 	}
 }
 
-
-//Diminuindo o cooldown
+//Diminuindo o cooldown entre pedidos
 for(var i = 0; i < array_length(pedido); i++){
 	if(pedido[i] = -1 and !global.paused){
 		espera_pedido = approach(espera_pedido, 0, 1)
 		break
+	}
+}
+
+//Diminuindo o tempo dos pedidos
+for(var i = 0; i < array_length(pedido); i++){
+	if(tempo_pedido[i] != -1 and !global.paused){
+		tempo_pedido[i] = approach(tempo_pedido[i], 0, 1)
+		
+		cor_pedido[i] = make_color_rgb(255, ((tempo_pedido[i] / seconds(30))) * 255, ((tempo_pedido[i] / seconds(30))) * 255)
+		clients[i].image_blend = cor_pedido[i]
+		
+		//Tirando o pedido caso o tempo acabe
+		if(tempo_pedido[i] = 0){
+				//Tirando o cliente do array
+				clients[i].served = true
+				clients[i] = -1
+				
+				//Removendo o tempo
+				tempo_pedido[i] = -1
+				
+				//Removendo o pedido
+				pedido[i] = -1
+				break
+		}
 	}
 }

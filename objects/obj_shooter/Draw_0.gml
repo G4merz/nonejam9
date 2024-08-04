@@ -38,8 +38,8 @@ draw_sprite_ext(spr_mira, 0, mirax, miray, 2, 2, 0, c_white, alpha) //Mira
 
 #region Arma
 
-var _xoff_arma = 20 + ((mirax - _c.cw_current / 2) / (_c.cw_current / 2)) * 40
-var _yoff_arma = 30 + ((miray - _c.ch_current / 2) / (_c.ch_current / 2)) * 40
+var _xoff_arma = 20 + (((mirax - _c.cw_current / 2) / (_c.cw_current / 2)) * 40) + ((espera_tiro / tempo_tiro) * 50) + irandom_range(-arma_shake, arma_shake)
+var _yoff_arma = 30 + (((miray - _c.ch_current / 2) / (_c.ch_current / 2)) * 40) + ((espera_tiro / tempo_tiro) * 10) + irandom_range(-arma_shake, arma_shake)
 var _xarma = _c.cw_current + _xoff_arma
 var _yarma = _c.ch_current + _yoff_arma
 var _alpha_diff = 0
@@ -53,8 +53,8 @@ draw_sprite_ext(spr_arma, 0, _xarma, _yarma, 1, 1, 0, c_white, alpha - _alpha_di
 #region Contadores 
 var _counterw = sprite_get_width(spr_contador_balas)
 var _counterh = sprite_get_height(spr_contador_balas)
-var _x1 = 0
-var _y1 = _c.ch_current
+var _x1 = 10
+var _y1 = _c.ch_current - 10
 var _x2 = center_x - _counterw / 2
 var _y2 = _counterh
 
@@ -83,3 +83,14 @@ draw_sprite_ext(spr_fonte_balas, _dez, _x2 +_xoff[1], _y2 - _yoff, 1, 1, 0, c_wh
 draw_sprite_ext(spr_fonte_balas, _un, _x2 +_xoff[2], _y2 - _yoff, 1, 1, 0, c_white, alpha)
 
 #endregion
+
+//Se eu estiver entrando pela primeira vez, coloco o texto de como sair
+if(first_time and global.shooting){
+	var _alpha = wave(.1, 1, 1)
+	var _exit_text = scribble("Aperte [c_yellow]ESCAPE[/c] para sair")
+		.starting_format("fnt_default", c_white)
+		.align(1, 1)
+		.blend(c_white, _alpha)
+		
+	_exit_text.draw(_c.cw_current / 2, _c.ch_current - 40)
+}

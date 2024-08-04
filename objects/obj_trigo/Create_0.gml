@@ -23,3 +23,7 @@ idle_spr = spr_trigo_idle
 walk_spr = spr_trigo_walk
 
 image_spd = 8 / game_get_speed(gamespeed_fps) //Velocidade manual (10 FPS)
+
+som_dano = function(){
+	quicksound(snd_folha_dano)
+}

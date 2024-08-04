@@ -16,6 +16,7 @@ global.max_inventory = 6
 
 //Variável que definem se o jogo está pausado ou não
 global.paused = false
+global.pause_delay = 10
 
 //Variável que define se estou em algum estande ou não
 global.shooting = false

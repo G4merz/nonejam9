@@ -1,6 +1,6 @@
 up = keyboard_check_pressed(vk_up)
 down = keyboard_check_pressed(vk_down)
-confirm = keyboard_check_pressed(ord("Z"))
+confirm = keyboard_check_pressed(ord("E"))
 confirm_2 = mouse_check_button_pressed(mb_left)
 quit = keyboard_check_pressed(vk_escape)
 

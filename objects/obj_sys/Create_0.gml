@@ -17,3 +17,7 @@ if(global.dificuldade < 3){
 	shooter_music = msc_caca_masterchef
 	audio_play_sound(shooter_music, 2, 1)
 }
+
+max_tempo = seconds(241)
+tempo = max_tempo
+alpha = 0

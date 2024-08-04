@@ -16,13 +16,14 @@ for(var i = 0; i < array_length(pedido); i++){
 	var _y2 = [y - 25, y - 24, y - 27]
 	
 	if(pedido[i] != -1){
-		draw_sprite_ext(spr_balao, 0, _x, _y[i] + 5, 1, 1, 0, c_white, 1)
-		draw_sprite_ext(spr_ingredientes, pedidos[pedido[i]][2], _x, _y[i], 1, 1, 0, c_white, 1)
+		draw_sprite_ext(spr_balao, 0, _x, _y[i] + 5, 1, 1, 0, cor_pedido[i], 1)
+		draw_sprite_ext(spr_ingredientes, pedidos[pedido[i]][2], _x, _y[i], 1, 1, 0, cor_pedido[i], 1)
 		draw_sprite_ext(spr_papeis_pedido, i, _x, _y2[i], 1, 1, 0, c_white, 1)
 	}
 }
 
-//Desenhando os clientes
+/*Desenhando os clientes
 for(var i = 0; i < ds_list_size(clientes); i++){
 	draw_sprite_ext(clientes[| i], 1, x + sprite_width / 2, y + 45 + 7 * i, 1, 1, 0, c_white, 1)
 }
+*/

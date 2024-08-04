@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_folha_dano",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.071,
+  "name":"snd_folha_dano",
+  "parent":{
+    "name":"Estandes",
+    "path":"folders/Sounds/SFX/Estandes.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_folha_dano.MP3",
+  "type":0,
+  "volume":1.0,
+}

@@ -14,6 +14,7 @@ cd_passo = seconds(.3)
 espera_passo = 0
 
 //Variáveis de desenho
+olhando = 3
 image_spd = 5 / game_get_speed(gamespeed_fps) //Velocidade manual (4 FPS)
 def_image_spd = image_spd
 

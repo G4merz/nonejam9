@@ -9,6 +9,12 @@ mirax = mouse_x
 miray = mouse_y
 mirar = 12 //Raio de alcance do tiro
 
+//Shake da arma
+arma_shake = 5
+
+//Primeira vez entrando no shooter
+first_time = true
+
 //Centro da tela (pra facilitar)
 center_x = 0
 center_y = 0
@@ -19,7 +25,7 @@ espera_tiro = 0
 played = true
 
 //Cooldown de spawn de entidades
-tempo_entidade = seconds(.1)
+tempo_entidade = seconds(.5)
 espera_entidade = tempo_entidade
 
 //Input do tiro

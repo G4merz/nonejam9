@@ -29,7 +29,7 @@ if(estado = "idle"){
 	sprite = idle_spr
 }else if(estado = "walk"){
 	if(sprite != walk_spr) image_ind = 0
-	x += vel * dir
+	if(!global.paused) x += vel * dir
 	sprite = walk_spr
 }
 

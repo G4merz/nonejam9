@@ -8,6 +8,7 @@ alpha = approach(alpha, (global.shooting) ? 1 : 0, 0.1)
 //Saindo do modo de tiro caso eu esteja nele
 if(keyboard_check_pressed(vk_escape) and global.shooting_delay = 0 and global.shooting){
 	quit_shooter()
+	first_time = false
 }
 
 //Diminuindo o delay
@@ -34,6 +35,7 @@ and espera_tiro = 0 and global.balas > 0){
 	global.balas--
 	played = false
 	array_resize(shot_input_array, 0)
+	arma_shake = 25
 	
 	#region Checando quais entidades estão no lugar da mira e dando dano apenas na mais em cima
 	var _list = ds_list_create()
@@ -62,6 +64,8 @@ if(espera_tiro <= seconds(.55) and !played and global.balas > 0) {
 	played = true
 }
 
+//Diminuindo o shake
+arma_shake = approach(arma_shake, 0, 0.6)
 //if(keyboard_check_pressed(vk_space)) global.balas++
 
 #endregion
