@@ -1,6 +1,9 @@
 //Herdando as informações do objeto pai
 event_inherited()
 
+//Emissor de partículas
+partem = part_emitter_create(obj_sys.partsys);
+
 //Variáveis de movimento
 max_vel = 3
 acel = 0.3

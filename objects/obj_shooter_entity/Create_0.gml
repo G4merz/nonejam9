@@ -69,8 +69,7 @@ morrer = function(){
 	instance_destroy()
 }
 
-///@method som_dano		
-///@description Altere esta função quando a entidade tiver que tocar algum som quando sofre dano.
+///@method som_dano() Altere esta função quando a entidade tiver que tocar algum som quando sofre dano.
 som_dano = function(){
 
 }
@@ -82,6 +81,7 @@ dano = function(_dano = 1){
 	som_dano()
 	
 	if(vida <= 0){
+		obj_shooter.burst(x, y, sprite_get_width(sprite), sprite_get_height(sprite))
 		morrer()
 	}
 }

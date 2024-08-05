@@ -12,25 +12,29 @@ layer_depth("paredes_1", obj_chefinho.depth - 1)
 layer_depth("paredes_2", 200)
 layer_depth("deco", layer_get_depth("paredes_1") - 1)
 
+if(sequence != -1 and layer_sequence_is_finished(sequence)) layer_sequence_destroy(sequence)
+
 #region Sons para cada bicho do estande
 if(!global.paused){
 	if(global.shooting = 1){
 		var _shiny = instance_exists(obj_vaca_estrela)
 		if(instance_exists(obj_vaca)){
-			if(chance(0.0085)){
+			if(chance(0.005)){
 				audio_play_sound(choose(snd_vaca1, snd_vaca2, snd_vaca3), 1, 0, (_shiny) ? 0.53: 1)
 			}
 		}
 	
 		if(instance_exists(obj_galinha)){
-			if(chance(0.0085)){
+			if(chance(0.005)){
 				audio_play_sound(choose(snd_galinha1, snd_galinha2), 1, 0, (_shiny) ? 0.3 : 1)
 			}
 		}
 		
 		
-		if(_shiny and !audio_is_playing(snd_vaca_shiny)){
-			quicksound(snd_vaca_shiny)
+		if(_shiny){
+			if(!audio_is_playing(snd_vaca_shiny)) quicksound(snd_vaca_shiny)
+		}else{
+			if(audio_is_playing(snd_vaca_shiny)) audio_stop_sound(snd_vaca_shiny)
 		}
 	}else if(global.shooting = 2){
 		if((instance_exists(obj_cacau) or instance_exists(obj_tomate) or instance_exists(obj_trigo))
@@ -55,4 +59,8 @@ if(tempo = 0){
 	else audio_sound_gain(shooter_music, 0, fade_spd * 2)
 	
 	audio_sound_gain(kitchen_music, 0, fade_spd * 2)
+	
+	if(alpha >= 1){
+		room_goto(rm_end)
+	}
 }

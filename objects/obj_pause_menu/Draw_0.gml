@@ -27,7 +27,6 @@ for(var i = 0; i < option_length; i++){
 	_c, _c, _c, _c, 1)
 }
 
-draw_text(10, 10, usable)
 draw_set_font(-1)
 draw_set_color(-1)
 draw_set_halign(-1)

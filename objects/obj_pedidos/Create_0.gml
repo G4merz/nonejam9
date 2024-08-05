@@ -2,8 +2,8 @@ e_alpha = 1
 next_to_player = 0
 
 #region Pedidos
-first_cd_pedido = seconds(1)
-cd_pedido = seconds(1)
+first_cd_pedido = seconds(10)
+cd_pedido = seconds(20)
 espera_pedido = first_cd_pedido
 
 starting = 2
@@ -27,7 +27,6 @@ clients = [-1, -1, -1]
 cor_pedido = [-1, -1, -1]
 
 action = function(){
-	var _pedido = 0
 	for(var i = array_length(pedido) - 1; i > -1; i--){
 		if(pedido[i] != -1){
 			if(check_inventory(pedidos[pedido[i]][0])){
@@ -54,6 +53,9 @@ action = function(){
 				
 				//Tocando o som
 				quicksound(snd_kaching)
+				
+				//Guardando a informação
+				obj_end_screen.pedidos += 1
 				
 				//Removendo o pedido no fim
 				pedido[i] = -1

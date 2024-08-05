@@ -235,14 +235,15 @@ function do_recipe(){
 
 #endregion
 
-#region Reset Global Variables
+#region Reset Game
 
 function reset_game(){
 	global.paused = false
 	global.balas = 10
 	global.shooting = false
 	clear_inventory()
-	game_restart()
+	audio_stop_all()
+	room_goto(rm_start)
 }
 
 #endregion

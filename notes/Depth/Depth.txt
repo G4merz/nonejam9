@@ -1,5 +1,7 @@
 Menu -9000
 Sistema -8000
+Transições -4000
 Inventário no topo direito da tela -3000
+Partículas -2500
 Efeitos de pegar itens e balas -2000
 Estande de tiro -1000

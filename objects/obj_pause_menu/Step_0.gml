@@ -1,5 +1,5 @@
-up = keyboard_check_pressed(vk_up)
-down = keyboard_check_pressed(vk_down)
+up = keyboard_check_pressed(ord("W"))
+down = keyboard_check_pressed(ord("S"))
 confirm = keyboard_check_pressed(ord("E"))
 confirm_2 = mouse_check_button_pressed(mb_left)
 quit = keyboard_check_pressed(vk_escape)
@@ -49,7 +49,7 @@ if(confirm or (confirm_2 and hovering)){
 		case 0:
 			switch(pos){
 				case 0: instance_destroy(); break
-				case 1: break
+				case 1: obj_sys.tempo = 0; instance_destroy(); break
 			}
 		break
 

@@ -9,7 +9,7 @@ menu_level = 0
 
 option =	[
 
-			["Resumir", "Tutorial", "Desistir"], 
+			["Resumir", "Desistir"], 
 			
 			]
 			

@@ -1,0 +1,3 @@
+part_type_destroy(partype)
+part_type_destroy(partype2)
+part_system_destroy(partsys)

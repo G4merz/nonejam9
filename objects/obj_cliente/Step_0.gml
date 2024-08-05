@@ -23,6 +23,7 @@ if(state = "saindo"){
 	y += min(lengthdir_y(vel, _dir), abs(destino_y - y))
 	
 	sprite_index = front_spr
+	if(type = clientes.alien) sprite_index = spr_alien_front
 	if(type = clientes.peixe) image_xscale = -1
 	
 	image_alpha = approach(image_alpha, 0, 0.01)
@@ -50,4 +51,3 @@ if(state = "espera"){
 		destino_y = 600
 	}
 }
-

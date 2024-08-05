@@ -23,11 +23,11 @@ for(var i = 0; i < array_length(pedido); i++){
 		quicksound(snd_sino_pedido)
 		
 		//Redefinindo tempo do pedido
-		tempo_pedido[i] = seconds(30)
+		tempo_pedido[i] = seconds(60)
 
 		//Adicionando cliente
 		clients[i] = instance_create_depth(x + 3 + (sprite_width / 2) * i, y + 50, depth - 10, obj_cliente)
-		clients[i].type = irandom(clientes.peixe)
+		clients[i].type = 0 //irandom(clientes.peixe)
 		break
 	}
 }
@@ -59,6 +59,9 @@ for(var i = 0; i < array_length(pedido); i++){
 				
 				//Removendo o pedido
 				pedido[i] = -1
+				
+				//Guardando a informação
+				obj_end_screen.pedidos_perdidos += 1
 				break
 		}
 	}

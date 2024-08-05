@@ -7,8 +7,18 @@ alpha = approach(alpha, (global.shooting) ? 1 : 0, 0.1)
 
 //Saindo do modo de tiro caso eu esteja nele
 if(keyboard_check_pressed(vk_escape) and global.shooting_delay = 0 and global.shooting){
-	quit_shooter()
+	sequence = layer_sequence_create("transicao", 0, 0, sq_transicao)
 	first_time = false
+}
+
+if(sequence != -1){
+	if(layer_sequence_get_headpos(sequence) = 59){
+		quit_shooter()
+	}
+	
+	if(layer_sequence_is_finished(sequence)){
+		layer_sequence_destroy(sequence)
+	}
 }
 
 //Diminuindo o delay
@@ -28,7 +38,7 @@ var _tiro = mouse_check_button_released(mb_left) //Botão do tiro
 array_insert_shift(shot_input_array, 0, _tiro)
 
 //Se eu estiver no modo de tiro e atirar, rodo o código abaixo
-if(shot_input() and global.shooting 
+if(shot_input() and global.shooting and obj_sys.tempo > 0
 and espera_tiro = 0 and global.balas > 0){
 	audio_play_sound(snd_tiro, 1, 0)
 	espera_tiro = tempo_tiro
@@ -77,7 +87,7 @@ if(espera_entidade = 0){
 	var _obj, _obj_type, _dir, _ex, _ey
 	_obj_type = choose("animal", "planta")
 	switch(_obj_type){
-		case "animal": _obj = (chance(0.98)) ? choose(obj_vaca, obj_galinha, obj_galinha) : obj_vaca_estrela; break
+		case "animal": _obj = (chance(0.99)) ? choose(obj_vaca, obj_galinha, obj_galinha) : obj_vaca_estrela; break
 		case "planta": _obj = choose(obj_cacau, obj_trigo, obj_tomate); break
 	}
 	_dir = choose(-1, 1)

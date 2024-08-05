@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_crowd_feliz",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":10.527312,
+  "name":"snd_crowd_feliz",
+  "parent":{
+    "name":"Outros",
+    "path":"folders/Sounds/SFX/Outros.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_crowd_feliz.MP3",
+  "type":0,
+  "volume":1.0,
+}

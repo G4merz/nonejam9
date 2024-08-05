@@ -1,5 +1,5 @@
 image_index = index
-if(estado != item_states.stored){
+if(estado != item_states.stored and !global.shooting){
 	draw_set_color(c_white)
 	//draw_text(x + 12, y - 20, nome)
 	draw_set_color(-1)

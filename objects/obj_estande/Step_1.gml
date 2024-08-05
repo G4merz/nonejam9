@@ -11,4 +11,14 @@ with(obj_chefinho){
 	}
 }
 
+if(sequence != -1){
+	if(layer_sequence_get_headpos(sequence) = 59){
+		enter_shooter(mode)
+	}
+	
+	if(layer_sequence_is_finished(sequence)){
+		layer_sequence_destroy(sequence)
+	}
+}
+
 e_alpha = approach(e_alpha, next_to_player, 0.1)

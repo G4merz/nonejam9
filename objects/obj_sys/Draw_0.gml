@@ -17,12 +17,6 @@ draw_set_color(-1)
 draw_set_font(-1)
 
 if(tempo = 0){
-	alpha += 0.005
+	alpha += 0.01
 	draw_sprite_stretched_ext(spr_quad, 0, 0, 0, room_width, room_height, c_black, alpha)
-	
-	draw_set_halign(1)
-	draw_set_valign(1)
-	draw_text(room_width / 2, room_height / 2, "F5 para reiniciar.")
-	draw_set_halign(-1)
-	draw_set_valign(-1)
 }
